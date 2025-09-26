@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Systems Voltage Construction - Professional Fire Protection Services</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f8f9fa;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #c41e3a 0%, #dc2626 100%);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* Navigation */
+    nav {
+      background: #fff;
+      padding: 1rem 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #dc2626;
+      color: white;
+    }
+
+    /* Main Content */
+    main {
+      padding: 2rem 0;
+    }
+
+    section {
+      margin-bottom: 4rem;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: #c41e3a;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: #dc2626;
+      margin: 1rem auto;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .service-card {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-left: 4px solid #dc2626;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-card h3 {
+      color: #c41e3a;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Project Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project-item {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    .project-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-bottom: 3px solid #dc2626;
+    }
+
+    .project-info {
+      padding: 1.5rem;
+    }
+
+    .project-info h3 {
+      color: #c41e3a;
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
+
+    .project-info p {
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    /* Contact Section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .contact-card {
+      background: #c41e3a;
+      color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #c41e3a;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 3rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>SYSTEMS VOLTAGE CONSTRUCTION</h1>
+      <p>Professional Fire Protection & Safety Systems Services</p>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <section id="about">
+        <h2>About Systems Voltage Construction</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>Systems Voltage Construction is a trusted contractor providing reliable, safe, and cost-effective solutions for fire protection and electrical projects across residential, commercial, and industrial sectors.</p>
+            
+            <p>We specialize in Fire Protection and Electrical Solutions, including Fire Alarm Systems, Electrical Installation, Audit & Correction, Metering & Monitoring, Motor Controls & ATS, Substation & MCC, Electrical Design, and Solar Power.</p>
+          </div>
+          <div class="about-text">
+            <h3 style="color: #c41e3a; margin-bottom: 1rem;">Our Mission</h3>
+            <p>To provide exceptional fire protection and electrical services that safeguard communities and businesses with reliable, innovative, and life-saving solutions.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="services">
+        <h2>Our Fire Protection Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Fire Alarm Systems</h3>
+            <p>Design, installation, and maintenance of comprehensive fire alarm systems including smoke detectors, heat sensors, and notification devices for early fire detection.</p>
+          </div>
+          <div class="service-card">
+            <h3>Sprinkler Systems</h3>
+            <p>Complete fire sprinkler system installation including wet, dry, and deluge systems for optimal fire suppression in all building types.</p>
+          </div>
+          <div class="service-card">
+            <h3>Fire Suppression Systems</h3>
+            <p>Specialized fire suppression systems including clean agent, foam, and CO2 systems for critical facilities and equipment protection.</p>
+          </div>
+          <div class="service-card">
+            <h3>Emergency Lighting & Exit Signs</h3>
+            <p>Installation and maintenance of emergency lighting systems and illuminated exit signs to ensure safe evacuation during emergencies.</p>
+          </div>
+          <div class="service-card">
+            <h3>Fire Safety Inspections</h3>
+            <p>Regular fire safety inspections, testing, and maintenance services to ensure all systems remain operational and compliant with codes.</p>
+          </div>
+          <div class="service-card">
+            <h3>Fire Safety Design & Consultation</h3>
+            <p>Professional fire safety engineering consultation and custom fire protection system design services for optimal building safety.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Our Fire Protection Projects</h2>
+        <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem; color: #666;">
+          Browse through our portfolio of completed fire protection projects showcasing our expertise and commitment to safety.
+        </p>
+        
+        <div class="gallery">
+          <div class="project-item">
+            <img src="assets/Picture2.jpg" alt="Hospital Fire Protection">
+            <div class="project-info">
+              <h3>Bernardino General Hospital Fire Safety</h3>
+              <p>Comprehensive fire protection system installation including fire alarms, sprinklers, and emergency systems for healthcare facility.</p>
+            </div>
+          </div>
+          
+          <div class="project-item">
+            <img src="assets/Picture3.jpg" alt="Fire Alarm Control Panel">
+            <div class="project-info">
+              <h3>Fire Alarm Control System</h3>
+              <p>Advanced fire alarm control panel installation with integrated monitoring and notification capabilities.</p>
+            </div>
+          </div>
+          
+          <div class="project-item">
+            <img src="assets/Picture7.jpg" alt="Industrial Fire Protection">
+            <div class="project-info">
+              <h3>Industrial Fire Suppression Project</h3>
+              <p>Comprehensive industrial fire suppression system for manufacturing facility with specialized protection zones.</p>
+            </div>
+          </div>
+          
+          <div class="project-item">
+            <img src="assets/Picture6.jpg" alt="Fire System Maintenance">
+            <div class="project-info">
+              <h3>Fire System Maintenance & Testing</h3>
+              <p>Regular maintenance and testing services for fire protection systems to ensure optimal performance and compliance.</p>
+            </div>
+          </div>
+          
+          <div class="project-item">
+            <img src="assets/Picture15.jpg" alt="Commercial Fire Protection">
+            <div class="project-info">
+              <h3>Commercial Fire Protection Installation</h3>
+              <p>Large-scale commercial fire protection system installation with modern detection and suppression technology.</p>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <img src="assets/Picture29.jpg" alt="Fire Safety Project Completion">
+            <div class="project-info">
+              <h3>Fire Safety Project Completion & Testing</h3>
+              <p>Final fire safety system testing, commissioning, and certification for project completion and occupancy approval.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">
+          Ready to protect your property with professional fire safety systems? Get in touch with us today.
+        </p>
+        
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>🔥 Emergency Fire Services</h3>
+            <p>Call us for immediate fire system assistance</p>
+            <p><strong>+63 908 315 5563</strong></p>
+          </div>
+          
+          <div class="contact-card">
+            <h3>📧 Email</h3>
+            <p>Send us your fire protection project details</p>
+            <p><strong>mannysvc8@gmail.com</strong></p>
+          </div>
+
+          <div class="contact-card">
+            <h3>⏰ Service Hours</h3>
+            <p>Business & Emergency Fire Services</p>
+            <p><strong>Mon-Fri: 7AM-6PM<br>24/7 Emergency Response</strong></p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Systems Voltage Construction. All rights reserved. | Licensed Fire Protection & Safety Systems Contractors</p>
+    </div>
+  </footer>
+</body>
+</html>
