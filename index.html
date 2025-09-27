@@ -3,19 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Systems Voltage Construction - Professional Fire Protection & Safety Systems Services for residential, commercial, and industrial sectors">
   <title>Systems Voltage Construction - Professional Fire Protection Services</title>
   <style>
+    /* ===== CSS RESET ===== */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    /* ===== ROOT VARIABLES ===== */
+    :root {
+      --primary-red: #c41e3a;
+      --secondary-red: #dc2626;
+      --text-dark: #333;
+      --text-light: #666;
+      --bg-light: #f8f9fa;
+      --white: #ffffff;
+      --shadow-light: 0 2px 4px rgba(0,0,0,0.1);
+      --shadow-medium: 0 4px 6px rgba(0,0,0,0.1);
+      --shadow-strong: 0 8px 16px rgba(0,0,0,0.15);
+      --border-radius: 10px;
+      --transition: all 0.3s ease;
+    }
+
+    /* ===== BASE STYLES ===== */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
-      color: #333;
-      background: #f8f9fa;
+      color: var(--text-dark);
+      background: var(--bg-light);
     }
 
     .container {
@@ -24,73 +42,16 @@
       padding: 0 20px;
     }
 
-    /* Header */
-    header {
-      background: linear-gradient(135deg, #c41e3a 0%, #dc2626 100%);
-      color: white;
-      padding: 2rem 0;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    header h1 {
+    /* ===== TYPOGRAPHY ===== */
+    h1 {
       font-size: 3rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
 
-    header p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
-
-    /* Navigation */
-    nav {
-      background: #fff;
-      padding: 1rem 0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 600;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      transition: all 0.3s ease;
-    }
-
-    nav a:hover {
-      background: #dc2626;
-      color: white;
-    }
-
-    /* Main Content */
-    main {
-      padding: 2rem 0;
-    }
-
-    section {
-      margin-bottom: 4rem;
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    }
-
     h2 {
-      color: #c41e3a;
+      color: var(--primary-red);
       font-size: 2.5rem;
       margin-bottom: 1rem;
       text-align: center;
@@ -102,91 +63,176 @@
       display: block;
       width: 80px;
       height: 3px;
-      background: #dc2626;
+      background: var(--secondary-red);
       margin: 1rem auto;
     }
 
-    .about-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin-bottom: 2rem;
+    h3 {
+      color: var(--primary-red);
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
     }
 
-    .about-text {
+    /* ===== HEADER ===== */
+    .header {
+      background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-red) 100%);
+      color: var(--white);
+      padding: 2rem 0;
+      text-align: center;
+      box-shadow: var(--shadow-medium);
+    }
+
+    .header__subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* ===== NAVIGATION ===== */
+    .nav {
+      background: var(--white);
+      padding: 1rem 0;
+      box-shadow: var(--shadow-light);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav__list {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: var(--transition);
+    }
+
+    .nav__link:hover {
+      background: var(--secondary-red);
+      color: var(--white);
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    .main {
+      padding: 2rem 0;
+    }
+
+    .section {
+      margin-bottom: 4rem;
+      background: var(--white);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    .section__intro {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      color: var(--text-light);
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about__content {
       font-size: 1.1rem;
       line-height: 1.8;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
-    .services-grid {
+    .about__content p {
+      margin-bottom: 1.5rem;
+    }
+
+    .about__content p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ===== SERVICES SECTION ===== */
+    .services__grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
-      margin-bottom: 2rem;
+      margin-top: 2rem;
     }
 
     .service-card {
-      background: #f8f9fa;
+      background: var(--bg-light);
       padding: 1.5rem;
       border-radius: 8px;
-      border-left: 4px solid #dc2626;
-      transition: transform 0.3s ease;
+      border-left: 4px solid var(--secondary-red);
+      transition: var(--transition);
     }
 
     .service-card:hover {
       transform: translateY(-5px);
+      box-shadow: var(--shadow-medium);
     }
 
-    .service-card h3 {
-      color: #c41e3a;
-      margin-bottom: 0.5rem;
+    .service-card__title {
+      color: var(--primary-red);
+      margin-bottom: 0.8rem;
+      font-size: 1.3rem;
     }
 
-    /* Project Gallery */
-    .gallery {
+    .service-card__description {
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* ===== PROJECTS SECTION ===== */
+    .projects__gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2rem;
       margin-top: 2rem;
     }
 
     .project-item {
-      background: white;
-      border-radius: 10px;
+      background: var(--white);
+      border-radius: var(--border-radius);
       overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: var(--shadow-light);
+      transition: var(--transition);
     }
 
     .project-item:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      box-shadow: var(--shadow-strong);
     }
 
-    .project-item img {
+    .project-item__image {
       width: 100%;
       height: 250px;
       object-fit: cover;
-      border-bottom: 3px solid #dc2626;
+      border-bottom: 3px solid var(--secondary-red);
     }
 
-    .project-info {
+    .project-item__content {
       padding: 1.5rem;
     }
 
-    .project-info h3 {
-      color: #c41e3a;
-      margin-bottom: 0.5rem;
+    .project-item__title {
+      color: var(--primary-red);
+      margin-bottom: 0.8rem;
       font-size: 1.3rem;
     }
 
-    .project-info p {
-      color: #666;
+    .project-item__description {
+      color: var(--text-light);
       font-size: 0.95rem;
+      line-height: 1.5;
     }
 
-    /* Contact Section */
-    .contact-grid {
+    /* ===== CONTACT SECTION ===== */
+    .contact__grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
@@ -194,206 +240,281 @@
     }
 
     .contact-card {
-      background: #c41e3a;
-      color: white;
+      background: var(--primary-red);
+      color: var(--white);
       padding: 2rem;
-      border-radius: 10px;
+      border-radius: var(--border-radius);
       text-align: center;
+      transition: var(--transition);
     }
 
-    .contact-card h3 {
+    .contact-card:hover {
+      background: var(--secondary-red);
+      transform: translateY(-3px);
+    }
+
+    .contact-card__title {
       margin-bottom: 1rem;
       font-size: 1.5rem;
+      color: var(--white);
     }
 
-    /* Footer */
-    footer {
-      background: #c41e3a;
-      color: white;
+    .contact-card__info {
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-card__highlight {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--primary-red);
+      color: var(--white);
       text-align: center;
       padding: 2rem 0;
       margin-top: 3rem;
     }
 
-    /* Responsive */
+    /* ===== RESPONSIVE DESIGN ===== */
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-
-      .about-content {
-        grid-template-columns: 1fr;
+      h1 {
+        font-size: 2.2rem;
       }
 
       h2 {
         font-size: 2rem;
       }
+
+      .nav__list {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .services__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .projects__gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .contact__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 15px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .header__subtitle {
+        font-size: 1rem;
+      }
+
+      .section {
+        margin-bottom: 2rem;
+        padding: 1rem;
+      }
+    }
+
+    /* ===== UTILITY CLASSES ===== */
+    .text-center {
+      text-align: center;
+    }
+
+    .mb-2 {
+      margin-bottom: 2rem;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
   </style>
 </head>
+
 <body>
-  <header>
+  <!-- Header Section -->
+  <header class="header">
     <div class="container">
       <h1>SYSTEMS VOLTAGE CONSTRUCTION</h1>
-      <p>Professional Fire Protection & Safety Systems Services</p>
+      <p class="header__subtitle">Professional Fire Protection & Safety Systems Services</p>
     </div>
   </header>
 
-  <nav>
+  <!-- Navigation -->
+  <nav class="nav">
     <div class="container">
-      <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <ul class="nav__list">
+        <li><a href="#about" class="nav__link">About Us</a></li>
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <main>
+  <!-- Main Content -->
+  <main class="main">
     <div class="container">
-      <section id="about">
+      
+      <!-- About Section -->
+      <section id="about" class="section">
         <h2>About Systems Voltage Construction</h2>
-        <div class="about-content">
-          <div class="about-text">
-            <p>Systems Voltage Construction is a trusted contractor providing reliable, safe, and cost-effective solutions for fire protection across residential, commercial, and industrial sectors.</p>
-            
-            <p>We specialize in comprehensive fire protection solutions, including fire alarm and suppression systems, sprinklers, emergency lighting, exit signs, inspections, and custom fire safety design and consultation.</p>
-          </div>
-          <div class="about-text">
-            <h3 style="color: #c41e3a; margin-bottom: 1rem;">Our Mission</h3>
-            <p>To provide exceptional fire protection and electrical services that safeguard communities and businesses with reliable, innovative, and life-saving solutions.</p>
-          </div>
+        <div class="about__content">
+          <p>Systems Voltage Construction is a trusted contractor providing reliable, safe, and cost-effective solutions for fire protection across residential, commercial, and industrial sectors.</p>
+          <p>We specialize in comprehensive fire protection solutions, including fire alarm and suppression systems, sprinklers, emergency lighting, exit signs, inspections, and custom fire safety design and consultation.</p>
         </div>
       </section>
 
-      <section id="services">
+      <!-- Services Section -->
+      <section id="services" class="section">
         <h2>Our Fire Protection Services</h2>
-        <div class="services-grid">
-          <div class="service-card">
-            <h3>Fire Alarm Systems</h3>
-            <p>Design, installation, and maintenance of comprehensive fire alarm systems including smoke detectors, heat sensors, and notification devices for early fire detection.</p>
-          </div>
-          <div class="service-card">
-            <h3>Sprinkler Systems</h3>
-            <p>Complete fire sprinkler system installation including wet, dry, and deluge systems for optimal fire suppression in all building types.</p>
-          </div>
-          <div class="service-card">
-            <h3>Fire Suppression Systems</h3>
-            <p>Specialized fire suppression systems including clean agent, foam, and CO2 systems for critical facilities and equipment protection.</p>
-          </div>
-          <div class="service-card">
-            <h3>Emergency Lighting & Exit Signs</h3>
-            <p>Installation and maintenance of emergency lighting systems and illuminated exit signs to ensure safe evacuation during emergencies.</p>
-          </div>
-          <div class="service-card">
-            <h3>Fire Safety Inspections</h3>
-            <p>Regular fire safety inspections, testing, and maintenance services to ensure all systems remain operational and compliant with codes.</p>
-          </div>
-          <div class="service-card">
-            <h3>Fire Safety Design & Consultation</h3>
-            <p>Professional fire safety engineering consultation and custom fire protection system design services for optimal building safety.</p>
-          </div>
+        <div class="services__grid">
+          <article class="service-card">
+            <h3 class="service-card__title">Fire Alarm Systems</h3>
+            <p class="service-card__description">Design, installation, and maintenance of comprehensive fire alarm systems including smoke detectors, heat sensors, and notification devices for early fire detection.</p>
+          </article>
+          
+          <article class="service-card">
+            <h3 class="service-card__title">Sprinkler Systems</h3>
+            <p class="service-card__description">Complete fire sprinkler system installation including wet, dry, and deluge systems for optimal fire suppression in all building types.</p>
+          </article>
+          
+          <article class="service-card">
+            <h3 class="service-card__title">Fire Suppression Systems</h3>
+            <p class="service-card__description">Specialized fire suppression systems including clean agent, foam, and CO2 systems for critical facilities and equipment protection.</p>
+          </article>
+          
+          <article class="service-card">
+            <h3 class="service-card__title">Emergency Lighting & Exit Signs</h3>
+            <p class="service-card__description">Installation and maintenance of emergency lighting systems and illuminated exit signs to ensure safe evacuation during emergencies.</p>
+          </article>
+          
+          <article class="service-card">
+            <h3 class="service-card__title">Fire Safety Inspections</h3>
+            <p class="service-card__description">Regular fire safety inspections, testing, and maintenance services to ensure all systems remain operational and compliant with codes.</p>
+          </article>
+          
+          <article class="service-card">
+            <h3 class="service-card__title">Fire Safety Design & Consultation</h3>
+            <p class="service-card__description">Professional fire safety engineering consultation and custom fire protection system design services for optimal building safety.</p>
+          </article>
         </div>
       </section>
 
-      <section id="projects">
+      <!-- Projects Section -->
+      <section id="projects" class="section">
         <h2>Our Fire Protection Projects</h2>
-        <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem; color: #666;">
+        <p class="section__intro">
           Browse through our portfolio of completed fire protection projects showcasing our expertise and commitment to safety.
         </p>
         
-        <div class="gallery">
-          <div class="project-item">
-            <img src="assets/Picture2.jpg" alt="Hospital Fire Protection">
-            <div class="project-info">
-              <h3>Bernardino General Hospital Fire Safety</h3>
-              <p>Comprehensive fire protection system installation including fire alarms, sprinklers, and emergency systems for healthcare facility.</p>
+        <div class="projects__gallery">
+          <article class="project-item">
+            <img src="assets/Picture2.jpg" alt="Hospital Fire Protection System Installation" class="project-item__image">
+            <div class="project-item__content">
+              <h3 class="project-item__title">Bernardino General Hospital Fire Safety</h3>
+              <p class="project-item__description">Comprehensive fire protection system installation including fire alarms, sprinklers, and emergency systems for healthcare facility.</p>
             </div>
-          </div>
+          </article>
           
-          <div class="project-item">
-            <img src="assets/Picture3.jpg" alt="Fire Alarm Control Panel">
-            <div class="project-info">
-              <h3>Fire Alarm Control System</h3>
-              <p>Advanced fire alarm control panel installation with integrated monitoring and notification capabilities.</p>
+          <article class="project-item">
+            <img src="assets/Picture3.jpg" alt="Advanced Fire Alarm Control Panel" class="project-item__image">
+            <div class="project-item__content">
+              <h3 class="project-item__title">Fire Alarm Control System</h3>
+              <p class="project-item__description">Advanced fire alarm control panel installation with integrated monitoring and notification capabilities.</p>
             </div>
-          </div>
+          </article>
           
-          <div class="project-item">
-            <img src="assets/Picture7.jpg" alt="Industrial Fire Protection">
-            <div class="project-info">
-              <h3>Industrial Fire Suppression Project</h3>
-              <p>Comprehensive industrial fire suppression system for manufacturing facility with specialized protection zones.</p>
+          <article class="project-item">
+            <img src="assets/Picture7.jpg" alt="Industrial Fire Suppression Installation" class="project-item__image">
+            <div class="project-item__content">
+              <h3 class="project-item__title">Industrial Fire Suppression Project</h3>
+              <p class="project-item__description">Comprehensive industrial fire suppression system for manufacturing facility with specialized protection zones.</p>
             </div>
-          </div>
+          </article>
           
-          <div class="project-item">
-            <img src="assets/Picture6.jpg" alt="Fire System Maintenance">
-            <div class="project-info">
-              <h3>Fire System Maintenance & Testing</h3>
-              <p>Regular maintenance and testing services for fire protection systems to ensure optimal performance and compliance.</p>
+          <article class="project-item">
+            <img src="assets/Picture6.jpg" alt="Fire System Maintenance and Testing" class="project-item__image">
+            <div class="project-item__content">
+              <h3 class="project-item__title">Fire System Maintenance & Testing</h3>
+              <p class="project-item__description">Regular maintenance and testing services for fire protection systems to ensure optimal performance and compliance.</p>
             </div>
-          </div>
+          </article>
           
-          <div class="project-item">
-            <img src="assets/Picture15.jpg" alt="Commercial Fire Protection">
-            <div class="project-info">
-              <h3>Commercial Fire Protection Installation</h3>
-              <p>Large-scale commercial fire protection system installation with modern detection and suppression technology.</p>
+          <article class="project-item">
+            <img src="assets/Picture15.jpg" alt="Commercial Fire Protection Installation" class="project-item__image">
+            <div class="project-item__content">
+              <h3 class="project-item__title">Commercial Fire Protection Installation</h3>
+              <p class="project-item__description">Large-scale commercial fire protection system installation with modern detection and suppression technology.</p>
             </div>
-          </div>
+          </article>
 
-          <div class="project-item">
-            <img src="assets/Picture29.jpg" alt="Fire Safety Project Completion">
-            <div class="project-info">
-              <h3>Fire Safety Project Completion & Testing</h3>
-              <p>Final fire safety system testing, commissioning, and certification for project completion and occupancy approval.</p>
+          <article class="project-item">
+            <img src="assets/Picture29.jpg" alt="Fire Safety System Testing and Commissioning" class="project-item__image">
+            <div class="project-item__content">
+              <h3 class="project-item__title">Fire Safety Project Completion & Testing</h3>
+              <p class="project-item__description">Final fire safety system testing, commissioning, and certification for project completion and occupancy approval.</p>
             </div>
-          </div>
+          </article>
         </div>
       </section>
 
-      <section id="contact">
+      <!-- Contact Section -->
+      <section id="contact" class="section">
         <h2>Contact Us</h2>
-        <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">
+        <p class="section__intro">
           Ready to protect your property with professional fire safety systems? Get in touch with us today.
         </p>
         
-        <div class="contact-grid">
-          <div class="contact-card">
-            <h3>🔥 Emergency Fire Services</h3>
-            <p>Call us for immediate fire system assistance</p>
-            <p><strong>+63 908 315 5563</strong></p>
-          </div>
+        <div class="contact__grid">
+          <article class="contact-card">
+            <h3 class="contact-card__title">🔥 Emergency Fire Services</h3>
+            <p class="contact-card__info">Call us for immediate fire system assistance</p>
+            <p class="contact-card__highlight">+63 908 315 5563</p>
+          </article>
           
-          <div class="contact-card">
-            <h3>📧 Email</h3>
-            <p>Send us your fire protection project details</p>
-            <p><strong>mannysvc8@gmail.com</strong></p>
-          </div>
+          <article class="contact-card">
+            <h3 class="contact-card__title">📧 Email</h3>
+            <p class="contact-card__info">Send us your fire protection project details</p>
+            <p class="contact-card__highlight">mannysvc8@gmail.com</p>
+          </article>
 
-          <div class="contact-card">
-            <h3>⏰ Service Hours</h3>
-            <p>Business & Emergency Fire Services</p>
-            <p><strong>Mon-Fri: 7AM-6PM<br>24/7 Emergency Response</strong></p>
-          </div>
+          <article class="contact-card">
+            <h3 class="contact-card__title">⏰ Service Hours</h3>
+            <p class="contact-card__info">Business & Emergency Fire Services</p>
+            <p class="contact-card__highlight">Mon-Fri: 7AM-6PM<br>24/7 Emergency Response</p>
+          </article>
         </div>
       </section>
+      
     </div>
   </main>
 
-  <footer>
+  <!-- Footer -->
+  <footer class="footer">
     <div class="container">
       <p>&copy; 2025 Systems Voltage Construction. All rights reserved. | Licensed Fire Protection & Safety Systems Contractors</p>
     </div>
   </footer>
 </body>
 </html>
-
-
